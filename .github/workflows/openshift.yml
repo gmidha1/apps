@@ -145,3 +145,7 @@ jobs:
         openshift_token: ${{ env.OPENSHIFT_TOKEN }}
         insecure_skip_tls_verify: true
         namespace: ${{ env.OPENSHIFT_NAMESPACE }}
+
+    - name: Install odf operator
+      run: |
+        oc apply -f odf.yaml
